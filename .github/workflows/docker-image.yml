@@ -15,6 +15,6 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag test
+      run: docker build . --file dockerfile.dev --tag test
     - name: Test the app
       run: docker run -e CI=true test npm run test
